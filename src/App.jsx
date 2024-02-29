@@ -1,17 +1,20 @@
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import './App.css'
+import Home from './home/HomePage';
+import Themes from './themes/ThemesPage';
+import SharedLayout from './sharedLayout/SharedLayout';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <BrowserRouter>
-      
-      </BrowserRouter>
-    </>
-  )
-}
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<Home />} />
+          <Route path="themes" element={<Themes />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
-export default App
+export default App;
