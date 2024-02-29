@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Good Times';
+    src: url('../fonts/Good Times.otf') format('truetype');
+}
+
+html, body, p, ol, ul, li, nav, div, section, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    scroll-behavior: smooth;
+  }
+  
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #fff;
+    background-color: #000;
+}
+
+
+
+@media (max-width: 768px) {
+    .main-title {
+      font-size: 2em;
+    }
+}
+  
