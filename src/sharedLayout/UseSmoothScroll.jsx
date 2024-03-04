@@ -23,16 +23,10 @@ const UseSmoothScroll = (offsetHeight) => {
         if (hash === '') {
             window.scrollTo(0, 0);
         } else {
-            requestAnimationFrame(() => {
-                const id = hash.replace('#', '');
-                if (!document.getElementById(id)) {
-                  setTimeout(() => {
-                    smoothScroll(id, offsetHeight);
-                  }, 100);
-                } else {
-                  smoothScroll(id, offsetHeight);
-                }
-            });
+            const id = hash.replace('#', '');
+            setTimeout(() => {
+                smoothScroll(id, offsetHeight);
+            }, document.getElementById(id) ? 0 : 100);
         }
     }, [hash, pathname, offsetHeight]);
 };
